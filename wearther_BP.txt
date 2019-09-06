@@ -1,0 +1,26 @@
+CREATE TABLE [dbo].[Korisnik] (
+    [Email_korisnika]   VARCHAR (50) NOT NULL,
+    [Ime_korisnika]     VARCHAR (50) NOT NULL,
+    [Prezime_korisnika] VARCHAR (50) NOT NULL,
+    [Lozinka_korisnika] VARCHAR (50) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Email_korisnika] ASC)
+);
+
+CREATE TABLE [dbo].[MojOrmar] (
+    [Id]         INT          IDENTITY (1, 1) NOT NULL,
+    [Tip]        VARCHAR (50) NOT NULL,
+    [Boja]       VARCHAR (50) NOT NULL,
+    [Marka]      VARCHAR (50) NOT NULL,
+    [Voda]       VARCHAR (50) NULL,
+    [Prigoda]    VARCHAR (50) NOT NULL,
+    [Image]      IMAGE        NOT NULL,
+    [Vrijeme0]   VARCHAR (50) NULL,
+    [Vrijeme1]   VARCHAR (50) NULL,
+    [Vrijeme2]   VARCHAR (50) NULL,
+    [Vrijeme3]   VARCHAR (50) NULL,
+    [Vrijeme4]   VARCHAR (50) NULL,
+    [Korisnik]   VARCHAR (50) NOT NULL,
+    [Privatnost] VARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
